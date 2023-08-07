@@ -54,3 +54,8 @@ DotNet/Muuttujat/obj/Debug/net7.0/ref/Muuttujat.dll
 DotNet/Muuttujat/obj/Debug/net7.0/refint/Muuttujat.dll
 JavaScript/Yksikkötestaus/node_modules
 OmiaTestejä/
+/DotNet/YksikkötestiDemo/.vs/YksikkötestiDemo/v17
+/DotNet/YksikkötestiDemo/YksikkötestiDemo/bin/Debug/net7.0
+/DotNet/YksikkötestiDemo/YksikkötestiDemo/obj
+/DotNet/YksikkötestiDemo/YksikkötestiDemoTests/bin/Debug/net7.0
+/DotNet/YksikkötestiDemo/YksikkötestiDemoTests/obj
