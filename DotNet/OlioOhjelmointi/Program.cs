@@ -20,7 +20,17 @@ Auto oma = new();
 oma.Merkki = "Toyota";
 oma.Väri = "musta";
 oma.Nopeus = 0;
-oma.Käynnistä();
+
+
+oma.Sammuta();
+oma.Jarruta();
+oma.Jarruta();
+oma.Jarruta();
+Console.WriteLine(oma.Nopeus);
+
+
+
+
 
 Auto naapurin = new();
 naapurin.Merkki = "Nissan";
