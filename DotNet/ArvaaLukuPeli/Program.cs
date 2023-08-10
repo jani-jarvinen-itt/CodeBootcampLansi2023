@@ -10,11 +10,14 @@ Algoritmi:
 4. Mene kohtaan 2, jos arvauskertoa (3 kpl) on vielä jäljellä.
 */
 
+const int SuurinLuku = 20;
+const int ArvauskertojenMäärä = 3;
+
 Random satunnainen = new();
-int oikea = satunnainen.Next(1, 21);
+int oikea = satunnainen.Next(1, SuurinLuku + 1);
 // Console.WriteLine(oikea);
 
-for (int arvauskerta = 0; arvauskerta < 3; arvauskerta++)
+for (int arvauskerta = 0; arvauskerta < ArvauskertojenMäärä; arvauskerta++)
 {
     int arvaus = KysyKäyttäjältäLuku();    
 
@@ -41,13 +44,13 @@ int KysyKäyttäjältäLuku()
     {
         try
         {
-            Console.WriteLine("Anna arvauksesi välillä 1-20:");
+            Console.WriteLine($"Anna arvauksesi välillä 1-{SuurinLuku}:");
             string syöte = Console.ReadLine();
             int arvaus = int.Parse(syöte);
 
-            if ((arvaus < 1) || (arvaus > 20))
+            if ((arvaus < 1) || (arvaus > SuurinLuku))
             {
-                Console.WriteLine("Arvauksen tulee olla välillä 1-20.");
+                Console.WriteLine($"Arvauksen tulee olla välillä 1-{SuurinLuku}.");
             }
             else
             {
