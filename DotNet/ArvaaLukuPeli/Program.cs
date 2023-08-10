@@ -7,7 +7,7 @@ Algoritmi:
    a. Jos oikein, pelaaja voittaa. Lopeta peli.
    b. Jos oikea luku on pienempi, kerro se.
    c. Jos oikea luku on suurempi, kerro se.
-4. Mene kohtaa 2, jos arvauskertoa (3 kpl) on vielä jäljellä.
+4. Mene kohtaan 2, jos arvauskertoa (3 kpl) on vielä jäljellä.
 */
 
 Random satunnainen = new();
@@ -16,29 +16,7 @@ int oikea = satunnainen.Next(1, 21);
 
 for (int arvauskerta = 0; arvauskerta < 3; arvauskerta++)
 {
-    int arvaus = 0;
-    while (true)
-    {
-        try
-        {
-            Console.WriteLine("Anna arvauksesi välillä 1-20:");
-            string syöte = Console.ReadLine();
-            arvaus = int.Parse(syöte);
-
-            if ((arvaus < 1) || (arvaus > 20))
-            {
-                Console.WriteLine("Arvauksen tulee olla välillä 1-20.");
-            }
-            else
-            {
-                break;
-            }
-        }
-        catch
-        {
-            Console.WriteLine("Antamasi syöte oli virheellinen.");
-        }
-    }
+    int arvaus = KysyKäyttäjältäLuku();    
 
     if (arvaus < oikea)
     {
@@ -56,3 +34,29 @@ for (int arvauskerta = 0; arvauskerta < 3; arvauskerta++)
 }
 
 Console.WriteLine("Peli on päättynyt.");
+
+int KysyKäyttäjältäLuku()
+{
+    while (true)
+    {
+        try
+        {
+            Console.WriteLine("Anna arvauksesi välillä 1-20:");
+            string syöte = Console.ReadLine();
+            int arvaus = int.Parse(syöte);
+
+            if ((arvaus < 1) || (arvaus > 20))
+            {
+                Console.WriteLine("Arvauksen tulee olla välillä 1-20.");
+            }
+            else
+            {
+                return arvaus;
+            }
+        }
+        catch
+        {
+            Console.WriteLine("Antamasi syöte oli virheellinen.");
+        }
+    }
+}
