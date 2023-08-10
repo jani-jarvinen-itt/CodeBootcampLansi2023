@@ -24,13 +24,26 @@ namespace OlioOhjelmointi
 
         public void Kiihdytä()
         {
-            // Nopeus = Nopeus + 10;
-            Nopeus += 10;
+            if (MoottoriKäynnissä)
+            {
+                // Nopeus = Nopeus + 10;
+                Nopeus += 10;
+
+                if (Nopeus > 200)
+                {
+                    Nopeus = 200;
+                }
+            }
         }
 
         public void Jarruta()
         {
             Nopeus -= 10;
+
+            if (Nopeus < 0)
+            {
+                Nopeus = 0;
+            }
         }
     }
 }
