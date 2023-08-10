@@ -17,15 +17,27 @@ int oikea = satunnainen.Next(1, 21);
 for (int arvauskerta = 0; arvauskerta < 3; arvauskerta++)
 {
     int arvaus = 0;
-    try
+    while (true)
     {
-        Console.WriteLine("Anna arvauksesi välillä 1-20:");
-        string syöte = Console.ReadLine();
-        arvaus = int.Parse(syöte);
-    }
-    catch
-    {
-        Console.WriteLine("Antamasi syöte oli virheellinen.");
+        try
+        {
+            Console.WriteLine("Anna arvauksesi välillä 1-20:");
+            string syöte = Console.ReadLine();
+            arvaus = int.Parse(syöte);
+
+            if ((arvaus < 1) || (arvaus > 20))
+            {
+                Console.WriteLine("Arvauksen tulee olla välillä 1-20.");
+            }
+            else
+            {
+                break;
+            }
+        }
+        catch
+        {
+            Console.WriteLine("Antamasi syöte oli virheellinen.");
+        }
     }
 
     if (arvaus < oikea)
