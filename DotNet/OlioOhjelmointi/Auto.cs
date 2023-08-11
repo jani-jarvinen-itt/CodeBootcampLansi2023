@@ -24,16 +24,20 @@ namespace OlioOhjelmointi
 
         public void Kiihdytä()
         {
-            if (MoottoriKäynnissä)
+            if (!MoottoriKäynnissä)
             {
-                // Nopeus = Nopeus + 10;
-                Nopeus += 10;
-
-                if (Nopeus > 200)
-                {
-                    Nopeus = 200;
-                }
+                throw new Exception("Autoa ei voi kiihdyttää koska moottori ei "+
+                                    "ole käynnissä. Kutsu Käynnistä() metodia ensin.");
             }
+
+            // Nopeus = Nopeus + 10;
+            Nopeus += 10;
+
+            if (Nopeus > 200)
+            {
+                Nopeus = 200;
+            }
+
         }
 
         public void Jarruta()

@@ -19,17 +19,36 @@ Auto oma = new();
 Auto oma = new();
 oma.Merkki = "Toyota";
 oma.Väri = "musta";
-oma.Nopeus = 0;
+
+oma.Käynnistä();
+oma.Kiihdytä();
+oma.Kiihdytä();
+Console.WriteLine(oma.Nopeus);
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 oma.Sammuta();
 oma.Jarruta();
 oma.Jarruta();
 oma.Jarruta();
 Console.WriteLine(oma.Nopeus);
-
-
-
+*/
 
 
 Auto naapurin = new();
