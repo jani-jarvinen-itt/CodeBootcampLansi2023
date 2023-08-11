@@ -8,10 +8,10 @@
 </div>
 
 <p>Luku 1:</p>
-<input type="number" />
+<input type="number" id="luku1" />
 
 <p>Luku 2:</p>
-<input type="number" />
+<input type="number" id="luku2" />
 
 <p>
     <button onclick="laskeSumma()">Laske summa</button>
@@ -19,6 +19,10 @@
 
 <script>
     function laskeSumma() {
-        alert("Toimii!");
+        let luku1 = document.getElementById("luku1").value;
+        let luku2 = document.getElementById("luku2").value;
+
+        let summa = parseInt(luku1) + parseInt(luku2);
+        alert("Lukujen summa on: " + summa);
     }
 </script>
