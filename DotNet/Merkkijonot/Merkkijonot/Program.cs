@@ -4,13 +4,17 @@
  - 600k kertaa: 58 sekuntia
 */
 
+using System.Text;
+
 DateTime alku = DateTime.Now;
 
-string s = "";
+StringBuilder rakentaja = new();
 for (int i = 0; i < 600_000; i++)
 {
-    s += "A";
+    rakentaja.Append("A");
 }
+string s = rakentaja.ToString();
+Console.WriteLine(s.Length);
 
 /*
 int tulos = 0;
