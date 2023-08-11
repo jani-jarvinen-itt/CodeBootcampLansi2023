@@ -16,14 +16,25 @@ Auto oma = new Auto();
 Auto oma = new();
 */
 
-Auto oma = new();
-oma.Merkki = "Toyota";
-oma.Väri = "musta";
+try
+{
+    Auto oma = new();
+    oma.Merkki = "Toyota";
+    oma.Väri = "musta";
 
-oma.Käynnistä();
-oma.Kiihdytä();
-oma.Kiihdytä();
-Console.WriteLine(oma.Nopeus);
+    //oma.Käynnistä();
+    oma.Kiihdytä();
+    oma.Kiihdytä();
+    Console.WriteLine(oma.Nopeus);
+}
+catch (Exception ex)
+{
+    Console.WriteLine("Hups! Jotain meni pieleen.");
+    Console.WriteLine(ex.Message);
+#if DEBUG
+    Console.WriteLine(ex.StackTrace);
+#endif
+}
 
 
 

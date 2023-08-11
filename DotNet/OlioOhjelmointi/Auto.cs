@@ -26,8 +26,9 @@ namespace OlioOhjelmointi
         {
             if (!MoottoriKäynnissä)
             {
-                throw new Exception("Autoa ei voi kiihdyttää koska moottori ei "+
-                                    "ole käynnissä. Kutsu Käynnistä() metodia ensin.");
+                throw new InvalidOperationException(
+                    "Autoa ei voi kiihdyttää koska moottori ei "+
+                    "ole käynnissä. Kutsu Käynnistä() metodia ensin.");
             }
 
             // Nopeus = Nopeus + 10;
