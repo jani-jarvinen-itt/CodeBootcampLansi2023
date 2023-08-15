@@ -1,18 +1,15 @@
 ﻿using Microsoft.Data.SqlClient;
 
 string yhteysmerkkijono = "Server=localhost\\SQLEXPRESS;Database=Northwind;Trusted_Connection=True;Encrypt=no;";
-SqlConnection yhteys = new(yhteysmerkkijono);
-try
+using (SqlConnection yhteys = new(yhteysmerkkijono))
 {
     yhteys.Open();
     Console.WriteLine("Tietokantayhteys avattu!");
 
     string sql = "SELECT * FROM Customers WHERE Country = 'Finland'";
-    SqlCommand komento = new(sql, yhteys);
-    try
+    using (SqlCommand komento = new(sql, yhteys))
     {
-        SqlDataReader lukija = komento.ExecuteReader();
-        try
+        using (SqlDataReader lukija = komento.ExecuteReader())
         {
             while (lukija.Read())
             {
@@ -20,18 +17,6 @@ try
                 Console.WriteLine(yritys);
             }
         }
-        finally
-        {
-            lukija.Close();
-        }
-    }
-    finally
-    {
-        komento.Dispose();
     }
 }
-finally
-{
-    yhteys.Close();
-    Console.WriteLine("Tietokantayhteys suljettu.");
-}
+Console.WriteLine("Tietokantayhteys suljettu.");
