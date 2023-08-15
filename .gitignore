@@ -89,3 +89,7 @@ DotNet/OlioOhjelmointi/obj
 /DotNet/AspNetHello/.vs/AspNetHello/v17
 /DotNet/AspNetHello/.vs/AspNetHello/config
 /DotNet/OlioOhjelmointi/.vscode
+/DotNet/AspNetHello/.vs
+/DotNet/SqlTietokantaDemo/.vs/SqlTietokantaDemo
+/DotNet/SqlTietokantaDemo/bin/Debug/net7.0
+/DotNet/SqlTietokantaDemo/obj
