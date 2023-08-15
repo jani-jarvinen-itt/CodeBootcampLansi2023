@@ -3,9 +3,9 @@ namespace OlioOhjelmointi
     public class Auto
     {
         // ominaisuudet (property)
-        public string Merkki { get; set; }
+        public string Merkki { get; set; } = "";
 
-        public string Väri { get; set; }
+        public string Väri { get; set; } = "";
 
         public int Nopeus { get; set; }
 
