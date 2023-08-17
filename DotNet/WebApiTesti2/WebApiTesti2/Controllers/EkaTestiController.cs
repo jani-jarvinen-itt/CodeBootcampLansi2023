@@ -7,12 +7,14 @@ namespace WebApiTesti2.Controllers
     [ApiController]
     public class EkaTestiController : ControllerBase
     {
+        [HttpGet]
         [Route("kello")]
         public DateTime Kellonaika()
         {
             return DateTime.Now;
         }
 
+        [HttpGet]
         [Route("moi")]
         public string SanoMoi()
         {
