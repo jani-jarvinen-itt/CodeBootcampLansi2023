@@ -1,3 +1,7 @@
+/*
+Scaffold-DbContext "Server=localhost\SQLEXPRESS;Database=Northwind;Trusted_Connection=True;Encrypt=no;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+*/
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
