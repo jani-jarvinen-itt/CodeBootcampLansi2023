@@ -94,3 +94,5 @@ DotNet/OlioOhjelmointi/obj
 /DotNet/SqlTietokantaDemo/bin/Debug/net7.0
 /DotNet/SqlTietokantaDemo/obj
 /DotNet/EntityFrameworkTesti/obj
+/DotNet/EntityFrameworkTesti/.vscode
+/DotNet/EntityFrameworkTesti/bin/Debug/net7.0
