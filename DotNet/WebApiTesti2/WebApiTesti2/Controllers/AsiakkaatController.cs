@@ -13,6 +13,17 @@ namespace WebApiTesti2.Controllers
         {
             NorthwindContext konteksti = new();
 
+            /*
+            // datan lisäys
+            konteksti.Customers.Add(new Customer()
+            {
+                CustomerId = "UUSIA",
+                CompanyName = "Uusi Asiakas",
+                Country = "Finland"
+            });
+            konteksti.SaveChanges();
+            */
+
             // LINQ-kysely
             var suomalaiset = from c in konteksti.Customers
                               where c.Country == "Finland"
