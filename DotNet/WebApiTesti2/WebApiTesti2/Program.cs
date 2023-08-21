@@ -4,6 +4,22 @@ Scaffold-DbContext "Server=localhost\SQLEXPRESS;Database=Northwind;Trusted_Conne
 
 var builder = WebApplication.CreateBuilder(args);
 
+// CORS-asetukset
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: "CodeBootcamp",
+                      policy =>
+                      {
+                          policy.AllowAnyOrigin();
+                          policy.AllowAnyHeader();
+                          policy.AllowAnyMethod();
+                          /*
+                          policy.WithOrigins("http://example.com",
+                                             "http://www.contoso.com");
+                          */
+                      });
+});
+
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -21,6 +37,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors("CodeBootcamp");
 
 app.UseAuthorization();
 
