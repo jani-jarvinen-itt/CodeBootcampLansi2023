@@ -19,7 +19,8 @@ export default function Käyttäjät() {
     let lista = [];
     for (const indeksi in käyttäjäLista) {
         // console.log(indeksi);
-        lista.push(<p>{käyttäjäLista[indeksi].name}</p>);
+        lista.push(<p key={käyttäjäLista[indeksi].id}>
+            {käyttäjäLista[indeksi].name}</p>);
     }
 
     return <div>

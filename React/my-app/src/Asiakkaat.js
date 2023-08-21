@@ -19,7 +19,8 @@ export default function Asiakkaat() {
     let lista = [];
     for (const indeksi in asiakasLista) {
         // console.log(indeksi);
-        lista.push(<p>{asiakasLista[indeksi].companyName}</p>);
+        lista.push(<p key={asiakasLista[indeksi].customerId}>
+            {asiakasLista[indeksi].companyName}</p>);
     }
 
     return <div>
