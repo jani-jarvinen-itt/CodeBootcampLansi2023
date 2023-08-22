@@ -3,13 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Asiakkaat from './Asiakkaat';
+// import Asiakkaat from './Asiakkaat';
 import Käyttäjät from './Käyttäjät';
+import Asiakkaat2 from './Asiakkaat2';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Asiakkaat />
+    <Asiakkaat2 />
+    { /* <Asiakkaat /> */ }
     <Käyttäjät />
     <App />
   </React.StrictMode>
