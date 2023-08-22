@@ -7,6 +7,12 @@ kursori = yhteys.cursor()
 # kursori.execute("CREATE TABLE asiakkaat(asiakasid, nimi, maa)")
 # print("Taulu 'asiakkaat' lisätty.")
 
+# vastaus = kursori.execute("SELECT COUNT(*) FROM asiakkaat")
+# tulos = vastaus.fetchone()
+# print("Asiakkaiden lukumäärä SQL-taulussa:", tulos[0])
+# exit()
+
+# CSV-aineiston luku ja tallennus SQL-tietokantaan
 tiedosto = open("Asiakkaat.csv", "r", encoding="utf8")
 print("CSV-tiedosto avattu.")
 
