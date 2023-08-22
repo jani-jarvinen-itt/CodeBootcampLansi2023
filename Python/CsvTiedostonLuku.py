@@ -1,4 +1,4 @@
-tiedosto = open("Asiakkaat.csv", "r")
+tiedosto = open("Asiakkaat.csv", "r", encoding="utf8")
 
 rivinumero = 1
 for rivi in tiedosto:
